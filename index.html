@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main-container">
+        <div class="tab-header">
+            <div class="tab-item active" data-tab="1">
+                <p>Tải Và Đăng Ký</p>
+            </div>
+            <div class="tab-item" data-tab="2">
+                <p>Liên Kết Ngân Hàng</p>
+            </div>
+            <div class="tab-item" data-tab="3">
+                <p>Nạp Tiền Vào Ví</p>
+            </div>
+            <div class="tab-item" data-tab="4">
+                <p>Rút Tiền Khỏi Ví</p>
+            </div>
+        </div>
+        <!-- Tab 1 -->
+        <div class="tab-body show" data-id="1">
+            <div class="tab-body__left">
+                <div class="border">
+                    <div class="content">
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-tai-vi-1-190103160624.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-2-190103153118.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-3-190103153122.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-4-190103153127.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-5-190103153131.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <button class="btn-arrow btn-arrow-next" onclick="setMarginLeft(-250, 1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </button>
+                        <button class="btn-arrow btn-arrow-prev" onclick="setMarginLeft(-250, -1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-body__right">
+                <div class="content">
+                    <div class="item active" data-id="1" onclick="setContentActive(1)">
+                        <div class="item-left">
+                            <span class="circle">1</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Tải ứng dụng MoMo</p>
+                            <p class="desc">
+                                Tải ứng dụng miễn phí bằng cách tìm 
+                                kiếm từ khóa “momo” trên <a href="#">App Store</a> hoặc 
+                                <a href="#">Google Play Store</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="2" onclick="setContentActive(2)">
+                        <div class="item-left">
+                            <span class="circle">2</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nhập số điện thoại</p>
+                            <p class="desc">
+                                Mở ứng dụng và nhập số điện thoại bạn muốn đăng ký MoMo.
+                                <span>
+                                    Lưu ý: Số điện thoại đăng kí MoMo phải trùng với số điện 
+                                    thoại đăng kí Internet Banking của ngân hàng bạn muốn liên kết.
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="3" onclick="setContentActive(3)">
+                        <div class="item-left">
+                            <span class="circle">3</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nhập mã xác thực</p>
+                            <p class="desc">
+                                Một tin nhắn chứa mã xác thực sẽ gửi trực tiếp đến số điện thoại của bạn.
+                                <span>
+                                    Vui lòng kiểm tra và nhập chính xác mã xác thực vào ô "Nhập mã xác thực" rồi nhấn "Tiếp tục".
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="4" onclick="setContentActive(4)">
+                        <div class="item-left">
+                            <span class="circle">4</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Tạo mật khẩu đăng nhập</p>
+                            <p class="desc">
+                                Thiết lập mật khẩu để bảo vệ tài khoản MoMo của bạn 
+                                gồm 6 chữ số và mật khẩu ở 2 ô phải hoàn toàn giống nhau.
+                                <span>
+                                    Sau đó bấm "Xác nhận".
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="5" onclick="setContentActive(5)">
+                        <div class="item-left last-child">
+                            <span class="circle">5</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nhập thông tin</p>
+                            <p class="desc">
+                                Sau khi tạo mật khẩu đăng nhập thành công,
+                                bạn nhập thông tin cá nhân theo yêu cầu và 
+                                nhấn "Xác nhận" để hoàn tất đăng ký.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 2 -->
+        <div class="tab-body" data-id="2">
+            <div class="tab-body__left">
+                <div class="border">
+                    <div class="content">
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220812164820-637959197008374704.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220812164932-637959197720361815.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220812164939-637959197797692568.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220812164959-637959197994473258.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220812165014-637959198147763120.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220812165039-637959198396482023.png" alt="">
+                            </div>
+                        </div>
+
+                        <button class="btn-arrow btn-arrow-next" onclick="setMarginLeft(-250, 1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </button>
+                        <button class="btn-arrow btn-arrow-prev" onclick="setMarginLeft(-250, -1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-body__right">
+                <div class="content">
+                    <div class="item active" data-id="1" onclick="setContentActive(1)">
+                        <div class="item-left">
+                            <span class="circle">1</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Liên kết tài khoản</p>
+                            <p class="desc">
+                                - Chọn "Quản lý tài khoản" tại màn hình chính.
+                                * Bạn có thể liên kết cùng lúc nhiều ngân hàng trên tài khoản MoMo. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="2" onclick="setContentActive(2)">
+                        <div class="item-left">
+                            <span class="circle">2</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nhấn "Liên kết ngay"</p>
+                            <p class="desc">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="3" onclick="setContentActive(3)">
+                        <div class="item-left">
+                            <span class="circle">3</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Chọn logo "Techcombank"</p>
+                            <p class="desc">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="4" onclick="setContentActive(4)">
+                        <div class="item-left">
+                            <span class="circle">4</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nhập thông tin chủ thẻ và nhấn "Tiếp tục"</p>
+                            <p class="desc">
+                                - Số thẻ.
+                                - Họ và tên chủ thẻ.
+                                - Số CMND/CCCD/Hộ chiếu đăng ký tại Ngân hàng.
+                                Lưu ý: Để liên kết thành công, tài khoản của bạn cần đáp ứng các điều kiện sau:
+                                - Thẻ đã được đăng ký dịch vụ thanh toán Internet qua thẻ tại ngân hàng Techcombank.
+                                - Số điện thoại đăng ký MoMo của khách hàng cần trùng với số đăng ký tại ngân hàng.
+                                - Số CMND/CCCD/Hộ chiếu đăng ký với MoMo cần trùng với số CMND/CCCD/Hộ chiếu đã đăng ký tại ngân hàng Techcombank.
+                                - Thẻ này đang không liên kết với MoMo khác.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="5" onclick="setContentActive(5)">
+                        <div class="item-left last-child">
+                            <span class="circle">5</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nhập mã xác thực OTP và nhấn "Tiếp tục" để hoàn tất liên kết</p>
+                            <p class="desc">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="6" onclick="setContentActive(6)">
+                        <div class="item-left last-child">
+                            <span class="circle">6</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Liên kết thành công</p>
+                            <p class="desc">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 3 -->
+        <div class="tab-body" data-id="3">
+            <div class="tab-body__left">
+                <div class="border">
+                    <div class="content">
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220811093900-637958075409904706.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220811093918-637958075586484360.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220811093933-637958075736093393.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220811093944-637958075842893199.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220811093955-637958075950943503.png" alt="">
+                            </div>
+                        </div>
+
+                        <button class="btn-arrow btn-arrow-next" onclick="setMarginLeft(-250, 1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </button>
+                        <button class="btn-arrow btn-arrow-prev" onclick="setMarginLeft(-250, -1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-body__right">
+                <div class="content">
+                    <div class="item active" data-id="1" onclick="setContentActive(1)">
+                        <div class="item-left">
+                            <span class="circle">1</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nạp tiền vào Ví</p>
+                            <p class="desc">
+                                Mở ứng dụng Ví MoMo, chọn mục "Nạp tiền vào ví". 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="2" onclick="setContentActive(2)">
+                        <div class="item-left">
+                            <span class="circle">2</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nhập số tiền cần nạp và chọn nguồn tiền</p>
+                            <p class="desc">
+                                Số tiền cần nạp tối thiểu 10.000đ đến 10.000.000đ (Hạn mức giao dịch: 50.000.000đ/ngày) 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="3" onclick="setContentActive(3)">
+                        <div class="item-left">
+                            <span class="circle">3</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Xác nhận giao dịch</p>
+                            <p class="desc">
+                                Kiểm tra thông tin và bấm "Xác nhận"
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="4" onclick="setContentActive(4)">
+                        <div class="item-left">
+                            <span class="circle">4</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nhập mật khẩu Ví</p>
+                            <p class="desc">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="5" onclick="setContentActive(5)">
+                        <div class="item-left last-child">
+                            <span class="circle">5</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nhập mã xác nhận OTP (nếu có)</p>
+                            <p class="desc">
+                                Đối với các giao dịch có giá trị cao, cần nhập mật khẩu OTP để xác thực. 
+                                Mã OTP được gửi đến qua tin nhắn ngân hàng, vui lòng kiểm tra và nhập mã vào ô.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 4 -->
+        <div class="tab-body" data-id="4">
+            <div class="tab-body__left">
+                <div class="border">
+                    <div class="content">
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220811110137-637958124977943574.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220811110159-637958125192921238.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220811110218-637958125381805234.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220811110234-637958125545494866.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="https://homepage.momocdn.net/img/momo-upload-api-220811110251-637958125710063994.png" alt="">
+                            </div>
+                        </div>
+
+                        <button class="btn-arrow btn-arrow-next" onclick="setMarginLeft(-250, 1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </button>
+                        <button class="btn-arrow btn-arrow-prev" onclick="setMarginLeft(-250, -1)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-body__right">
+                <div class="content">
+                    <div class="item active" data-id="1" onclick="setContentActive(1)">
+                        <div class="item-left">
+                            <span class="circle">1</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Chọn "Rút tiền" từ màn hình chính của MoMo</p>
+                            <p class="desc">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="2" onclick="setContentActive(2)">
+                        <div class="item-left">
+                            <span class="circle">2</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nhập số tiền cần rút và phương thức nhận tiền</p>
+                            <p class="desc">
+                                Nhập số tiền cần rút với số tiền nhỏ hơn hoặc bằng số dư trong ví,
+                                tối thiểu 50.000đ/giao dịch đến tối đa 50.000.000đ/giao dịch,tối đa 50.000.000đ/ngày.
+                                Bạn có thể chọn mục "Biểu phí rút tiền" để tham khảo mức phí cụ thể áp dụng cho mỗi giao dịch rút tiền.
+                                Sau khi nhập số tiền và chọn phương thức nhận tiền vui lòng nhấn "Rút tiền"
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="3" onclick="setContentActive(3)">
+                        <div class="item-left">
+                            <span class="circle">3</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Xác nhận giao dịch</p>
+                            <p class="desc">
+                                Kiểm tra thông tin và xác nhận giao dịch.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="4" onclick="setContentActive(4)">
+                        <div class="item-left">
+                            <span class="circle">4</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Nhập mật khẩu để hoàn tất giao dịch</p>
+                            <p class="desc">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item" data-id="5" onclick="setContentActive(5)">
+                        <div class="item-left last-child">
+                            <span class="circle">5</span>
+                        </div>
+                        <div class="item-right">
+                            <p class="title">Giao dịch thành công</p>
+                            <p class="desc">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
