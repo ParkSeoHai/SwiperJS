@@ -59,6 +59,7 @@ function setContentActive(index) {
     swiperElement.style.marginLeft = swiperMarginLeft + 'px';
     handleBtnNextPrev(swiperMarginLeft);
     handleShowContent(swiperItemActive);
+    marginLeft = 0;
 }
 
 // Handle button next / prev
@@ -99,6 +100,8 @@ function setMarginLeft(value, index) {
     handleBtnNextPrev(swiperMarginLeft);
     // Show content right
     handleShowContent(swiperItemActive);
+
+    marginLeft = 0;
 }
 
 // Handle event cursor slice image
@@ -145,6 +148,7 @@ function setEventMouse() {
     swiperElement.addEventListener('mouseleave', (e) => {
         isMouseDown = false;
         handleSlice();
+        console.log(marginLeft);
     })
     
     swiperElement.addEventListener('mouseup', (e) => {
